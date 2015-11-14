@@ -5,6 +5,34 @@ class PackagesController < ApplicationController
   # GET /packages.json
   def index
     @packages = Package.all
+    @packages2 = @packages.map do |package|
+      [
+            package.hours,
+            package.first_videographer,
+            package.first_videographer_hours,
+            package.second_videographer,
+            package.second_videographer_hours,
+            package.highlight_video,
+            package.documentary_edit,
+            package.published_dvds,
+            package.published_bds,
+            package.over_eight_hours,
+            package.over_ten_hours
+        ]
+    end.transpose
+    @row_headers = [
+    'Hours Total',
+    'First Videographer',
+    'First Videographer (hours)',
+    'Second Videographer',
+    'Second Videographer (hours)',
+    'Highlight Video',
+    'Documentary Edit',
+    "Published DVD's",
+    "Published BD's",
+    'Over 8 hours % discount',
+    'Over 10 hours % discount',
+    ]
   end
 
   # GET /packages/1

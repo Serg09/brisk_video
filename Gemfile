@@ -45,7 +45,8 @@ group :development, :test do
   gem 'sqlite3'
 	gem 'shoulda-matchers'
   gem 'bootstrap-generators'
-
+  gem 'geocoder'
+  gem 'gmaps4rails'
 
 end
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151114164855) do
+ActiveRecord::Schema.define(version: 20151114194604) do
 
   create_table "packages", force: :cascade do |t|
     t.decimal  "hours"
@@ -27,6 +27,16 @@ ActiveRecord::Schema.define(version: 20151114164855) do
     t.decimal  "over_ten_hours"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "name"
+    t.string   "address"
+    t.string   "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

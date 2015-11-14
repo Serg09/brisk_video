@@ -1,0 +1,47 @@
+<div class="page-header">
+  <%= link_to packages_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_package_path(@package), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show package</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Hours:</dt>
+  <dd><%= @package.hours %></dd>
+
+  <dt>First videographer:</dt>
+  <dd><%= @package.first_videographer %></dd>
+
+  <dt>First videographer hours:</dt>
+  <dd><%= @package.first_videographer_hours %></dd>
+
+  <dt>Second videographer:</dt>
+  <dd><%= @package.second_videographer %></dd>
+
+  <dt>Second videographer hours:</dt>
+  <dd><%= @package.second_videographer_hours %></dd>
+
+  <dt>Highlight video:</dt>
+  <dd><%= @package.highlight_video %></dd>
+
+  <dt>Documentary edit:</dt>
+  <dd><%= @package.documentary_edit %></dd>
+
+  <dt>Published dvds:</dt>
+  <dd><%= @package.published_dvds %></dd>
+
+  <dt>Published bds:</dt>
+  <dd><%= @package.published_bds %></dd>
+
+  <dt>Over eight hours:</dt>
+  <dd><%= @package.over_eight_hours %></dd>
+
+  <dt>Over ten hours:</dt>
+  <dd><%= @package.over_ten_hours %></dd>
+
+</dl>

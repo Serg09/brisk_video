@@ -1,0 +1,1 @@
+json.extract! @package, :id, :hours, :first_videographer, :first_videographer_hours, :second_videographer, :second_videographer_hours, :highlight_video, :documentary_edit, :published_dvds, :published_bds, :over_eight_hours, :over_ten_hours, :created_at, :updated_at
